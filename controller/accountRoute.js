@@ -12,4 +12,9 @@ router.post("/add",async(req,res)=>{
     })
 })
 
+router.get("/view",async(req,res)=>{
+    let data = await accountModel.find()
+    res.json(data)
+})
+
 module.exports = router
